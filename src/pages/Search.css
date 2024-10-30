@@ -1,4 +1,4 @@
-#movies {
+#books {
   padding: 20px;
   font-size: 24px;
   font-weight: bold;
@@ -60,7 +60,7 @@
     text-align: center;
   }
 
-  #movies {
+  #books {
     padding: 10px;
     font-size: 20px;
   }

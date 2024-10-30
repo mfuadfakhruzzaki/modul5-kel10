@@ -19,6 +19,10 @@
   justify-content: space-around;
 }
 
+.star {
+  margin-top: 4px;
+}
+
 #title {
   color: white;
   font-size: 22px;
@@ -27,7 +31,7 @@
 }
 
 #genre {
-  color: grey;
+  color: "#f0f0f0";
   font-family: Verdana;
   font-weight: 500;
   font-size: 12px;

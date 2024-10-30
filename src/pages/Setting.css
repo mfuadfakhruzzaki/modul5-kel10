@@ -1,0 +1,24 @@
+#songs {
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.containerTop {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.rowcoba {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Add other styling as needed */

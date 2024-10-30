@@ -10,7 +10,7 @@ export default function CardSmall({ title, genre, img, size, color, onClick }) {
           <p id="title">{title}</p>
           <p id="genre">{genre}</p>
         </div>
-        <div>
+        <div className="star">
           <AiFillStar color={color} size={size} />
           <AiFillStar color={color} size={size} />
           <AiFillStar color={color} size={size} />

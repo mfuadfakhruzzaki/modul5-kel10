@@ -2,23 +2,23 @@ import { Fragment } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import CardBig from "../component/CardBig";
 import CardSmall from "../component/CardSmall";
-import "./Movie.css";
-import movies from "../data/MoviesData"; // Import the shared movie data
+import "./Setting.css"; // You'll need to create or copy styles
+import songs from "../data/SongsData"; // Import the shared song data
 
-export default function Movie() {
+export default function Setting() {
   const STAR_COLOR = "rgb(220, 117, 21)";
   const STAR_SIZE = 20;
   const navigate = useNavigate(); // Declare useNavigate for routing
 
-  // Split movies data into two categories
-  const poster = movies.filter((movie) => movie.id <= 3); // First three movies
-  const data = movies.filter((movie) => movie.id > 3); // Remaining movies
+  // Split songs data into two categories
+  const topSongs = songs.filter((song) => song.id <= 3); // First three songs
+  const allSongs = songs.filter((song) => song.id > 3); // Remaining songs
 
   return (
     <>
-      <p id="movies">Top Movies</p>
+      <p id="songs">Top Songs</p>
       <div className="containerTop">
-        {poster.map((item, index) => (
+        {topSongs.map((item, index) => (
           <Fragment key={item.id}>
             <CardBig
               title={item.title}
@@ -26,9 +26,9 @@ export default function Movie() {
               genre={item.genre}
               size={STAR_SIZE}
               color={STAR_COLOR}
-              onClick={() => navigate(`/movie/${item.id}`)} // Navigate to MovieDetail on click
+              onClick={() => navigate(`/song/${item.id}`)} // Navigate to SongDetail on click
             />
-            {poster.length === index + 1 ? (
+            {topSongs.length === index + 1 ? (
               <div style={{ marginRight: 40 }} />
             ) : null}
           </Fragment>
@@ -36,8 +36,8 @@ export default function Movie() {
       </div>
       <div className="rowcoba">
         <div className="column">
-          <p id="movies">All Movies</p>
-          {data.map((item, index) => (
+          <p id="songs">All Songs</p>
+          {allSongs.map((item, index) => (
             <Fragment key={item.id}>
               <CardSmall
                 title={item.title}
@@ -45,9 +45,9 @@ export default function Movie() {
                 genre={item.genre}
                 size={STAR_SIZE}
                 color={STAR_COLOR}
-                onClick={() => navigate(`/movie/${item.id}`)} // Navigate to MovieDetail on click
+                onClick={() => navigate(`/song/${item.id}`)} // Navigate to SongDetail on click
               />
-              {data.length === index + 1 && (
+              {allSongs.length === index + 1 && (
                 <div style={{ marginBottom: 80 }} />
               )}
             </Fragment>
