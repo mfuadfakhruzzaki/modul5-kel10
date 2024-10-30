@@ -71,13 +71,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # Menggunakan REST API milik sendiri
 
-## base url https://fuadfakhruz.blog
+base url https://fuadfakhruz.blog
 
-## login menggunakan method post dengan req body email dan password pada endpoint /auth/login
+login menggunakan method post dengan req body email dan password pada endpoint /auth/login
 
-## pada halaman profile juga saya tambahkan fetch data api untuk endpoint /api/users/profile untuk mendapatkan data profil
+pada halaman profile juga saya tambahkan fetch data api untuk endpoint /api/users/profile untuk mendapatkan data profil
 
-## untuk testing pakai email dan password dibawah ini
+untuk testing pakai email dan password dibawah ini
 
 mfuadfakhruzzaki@students.undip.ac.id
+
 testpassword
